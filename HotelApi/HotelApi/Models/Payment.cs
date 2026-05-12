@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace HotelApi.Models
+﻿namespace HotelApi.Models
 {
     public class Payment
     {
@@ -11,11 +9,10 @@ namespace HotelApi.Models
 
         public decimal Amount { get; set; }
 
-        [MaxLength(50)]
-        public string PaymentMethod { get; set; } = "Cash";
-
-        [MaxLength(50)]
+        public string PaymentMethod { get; set; } = "Card";
         public string PaymentStatus { get; set; } = "Pending";
+
+        public string TransactionCode { get; set; } = string.Empty;
 
         public DateTime PaymentDate { get; set; } = DateTime.UtcNow;
     }

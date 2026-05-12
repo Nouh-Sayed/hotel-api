@@ -1,10 +1,3 @@
-E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.csproj.AssemblyReference.cache
-E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\rpswa.dswa.cache.json
-E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.GeneratedMSBuildEditorConfig.editorconfig
-E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.AssemblyInfoInputs.cache
-E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.AssemblyInfo.cs
-E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.csproj.CoreCompileInputs.cache
-E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.MvcApplicationPartsAssemblyInfo.cache
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\appsettings.Development.json
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\appsettings.json
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\HotelApi\bin\Debug\net9.0\appsettings.Development.json
@@ -12,6 +5,7 @@ E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\HotelApi\bin\Debug\net9.0\appsett
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\HotelApi\bin\Debug\net9.0\HotelApi.deps.json
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\HotelApi\bin\Debug\net9.0\HotelApi.runtimeconfig.json
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\HotelApi\bin\Debug\net9.0\HotelApi.staticwebassets.endpoints.json
+E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\hotels api.json
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\HotelApi.staticwebassets.runtime.json
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\HotelApi.staticwebassets.endpoints.json
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\HotelApi.exe
@@ -43,6 +37,7 @@ E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.d
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\MongoDB.Bson.dll
@@ -50,6 +45,9 @@ E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\MongoDB.Driver.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Mono.TextTemplating.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\SharpCompress.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Snappier.dll
+E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\System.CodeDom.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\System.Composition.Convention.dll
@@ -129,6 +127,15 @@ E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Dr
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.csproj.AssemblyReference.cache
+E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\rpswa.dswa.cache.json
+E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.GeneratedMSBuildEditorConfig.editorconfig
+E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.AssemblyInfoInputs.cache
+E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.AssemblyInfo.cs
+E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.csproj.CoreCompileInputs.cache
+E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.MvcApplicationPartsAssemblyInfo.cs
+E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.MvcApplicationPartsAssemblyInfo.cache
+E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.sourcelink.json
 E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\rjimswa.dswa.cache.json
 E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -137,16 +144,10 @@ E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\staticwebassets.build.json
 E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\staticwebassets.build.json.cache
 E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\staticwebassets.development.json
 E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.csproj.Up2Date
 E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.dll
 E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\refint\HotelApi.dll
 E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.pdb
 E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.genruntimeconfig.cache
 E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\ref\HotelApi.dll
-E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
-E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
-E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\HotelApi.MvcApplicationPartsAssemblyInfo.cs
-E:\HotelApi\HotelApi\HotelApi\bin\Debug\net8.0\hotels api.json
+E:\HotelApi\HotelApi\HotelApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

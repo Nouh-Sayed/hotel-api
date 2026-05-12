@@ -9,17 +9,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+builder.Services.AddHostedService<SmartPriceUpdaterService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<IPricingService, PricingService>();
 builder.Services.AddScoped<IHotelService, HotelService>();
 builder.Services.AddScoped<IRoomService, RoomService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
-
-
+builder.Services.AddScoped<IPricingService, PricingService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -43,6 +43,7 @@ app.UseCors("AllowAll");
 app.UseAuthorization();
 
 app.MapControllers();
+
 using (var scope = app.Services.CreateScope())
 {
     try
@@ -51,11 +52,21 @@ using (var scope = app.Services.CreateScope())
         var jsonPath = Path.Combine(Directory.GetCurrentDirectory(), "hotels api.json");
 
         await DataSeeder.SeedHotelsAsync(db, jsonPath);
+        await RoomSeeder.SeedRoomsAsync(db);
     }
     catch (Exception ex)
     {
         Console.WriteLine("Seeder skipped: " + ex.Message);
     }
 }
+
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+    await AdminSeeder.SeedAsync(context);
+    await HotelImageSeeder.SeedAsync(context);
+}
+
 
 app.Run();

@@ -17,16 +17,7 @@ namespace HotelApi.Services
         public async Task<IEnumerable<RoomDto>> GetAllAsync()
         {
             var rooms = await _context.Rooms.AsNoTracking().ToListAsync();
-            return rooms.Select(r => new RoomDto
-            {
-                RoomId = r.RoomId,
-                HotelId = r.HotelId,
-                RoomNumber = r.RoomNumber,
-                RoomType = r.RoomType,
-                Capacity = r.Capacity,
-                PricePerNight = r.PricePerNight,
-                IsAvailable = r.IsAvailable
-            });
+            return rooms.Select(Map);
         }
 
         public async Task<IEnumerable<RoomDto>> GetByHotelAsync(int hotelId)
@@ -36,16 +27,7 @@ namespace HotelApi.Services
                 .AsNoTracking()
                 .ToListAsync();
 
-            return rooms.Select(r => new RoomDto
-            {
-                RoomId = r.RoomId,
-                HotelId = r.HotelId,
-                RoomNumber = r.RoomNumber,
-                RoomType = r.RoomType,
-                Capacity = r.Capacity,
-                PricePerNight = r.PricePerNight,
-                IsAvailable = r.IsAvailable
-            });
+            return rooms.Select(Map);
         }
 
         public async Task<RoomDto> CreateAsync(CreateRoomDto dto)
@@ -54,6 +36,9 @@ namespace HotelApi.Services
             if (!hotelExists)
                 throw new InvalidOperationException("Hotel not found.");
 
+            if (await _context.Rooms.AnyAsync(r => r.HotelId == dto.HotelId && r.RoomNumber == dto.RoomNumber))
+                throw new InvalidOperationException("Room number already exists in this hotel.");
+
             var room = new Room
             {
                 HotelId = dto.HotelId,
@@ -61,22 +46,40 @@ namespace HotelApi.Services
                 RoomType = dto.RoomType,
                 Capacity = dto.Capacity,
                 PricePerNight = dto.PricePerNight,
-                IsAvailable = dto.IsAvailable
+                IsAvailable = dto.IsAvailable,
+                Description = dto.Description,
+                BedType = dto.BedType,
+                ViewType = dto.ViewType,
+                HasBalcony = dto.HasBalcony,
+                HasBreakfast = dto.HasBreakfast,
+                HasWifi = dto.HasWifi,
+                HasAirConditioning = dto.HasAirConditioning,
+                HasTV = dto.HasTV
             };
 
             _context.Rooms.Add(room);
             await _context.SaveChangesAsync();
 
-            return new RoomDto
-            {
-                RoomId = room.RoomId,
-                HotelId = room.HotelId,
-                RoomNumber = room.RoomNumber,
-                RoomType = room.RoomType,
-                Capacity = room.Capacity,
-                PricePerNight = room.PricePerNight,
-                IsAvailable = room.IsAvailable
-            };
+            return Map(room);
         }
+
+        private static RoomDto Map(Room r) => new()
+        {
+            RoomId = r.RoomId,
+            HotelId = r.HotelId,
+            RoomNumber = r.RoomNumber,
+            RoomType = r.RoomType,
+            Capacity = r.Capacity,
+            PricePerNight = r.PricePerNight,
+            IsAvailable = r.IsAvailable,
+            Description = r.Description,
+            BedType = r.BedType,
+            ViewType = r.ViewType,
+            HasBalcony = r.HasBalcony,
+            HasBreakfast = r.HasBreakfast,
+            HasWifi = r.HasWifi,
+            HasAirConditioning = r.HasAirConditioning,
+            HasTV = r.HasTV
+        };
     }
 }

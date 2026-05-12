@@ -20,5 +20,20 @@ namespace HotelApi.DTOs
         public decimal PricePerNight { get; set; }
 
         public bool IsAvailable { get; set; } = true;
+
+        [MaxLength(500)]
+        public string Description { get; set; } = string.Empty;
+
+        [MaxLength(100)]
+        public string BedType { get; set; } = string.Empty;
+
+        [MaxLength(100)]
+        public string ViewType { get; set; } = string.Empty;
+
+        public bool HasBalcony { get; set; }
+        public bool HasBreakfast { get; set; }
+        public bool HasWifi { get; set; }
+        public bool HasAirConditioning { get; set; }
+        public bool HasTV { get; set; }
     }
 }

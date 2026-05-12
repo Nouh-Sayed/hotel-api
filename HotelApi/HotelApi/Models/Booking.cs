@@ -15,19 +15,23 @@ namespace HotelApi.Models
         public int RoomId { get; set; }
         public Room Room { get; set; } = null!;
 
+        [Required]
         public DateTime CheckInDate { get; set; }
+
+        [Required]
         public DateTime CheckOutDate { get; set; }
 
-        [Range(1, 20)]
         public int Adults { get; set; }
-
-        [Range(0, 20)]
         public int Children { get; set; }
 
+        [Required]
         public decimal TotalPrice { get; set; }
 
         [MaxLength(50)]
-        public string Status { get; set; } = "Confirmed";
+        public string Status { get; set; } = "Pending";
+
+        [MaxLength(500)]
+        public string SpecialRequests { get; set; } = string.Empty;
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }

@@ -58,8 +58,16 @@ namespace HotelApi.Services
 
             var totalCount = await query.CountAsync();
 
+            query = queryDto.SortBy switch
+            {
+                "priceAsc" => query.OrderBy(h => h.PricePerNightTry),
+                "priceDesc" => query.OrderByDescending(h => h.PricePerNightTry),
+                "ratingDesc" => query.OrderByDescending(h => h.Rating),
+                "nameAsc" => query.OrderBy(h => h.Name),
+                _ => query.OrderBy(h => h.Name)
+            };
+
             var hotels = await query
-                .OrderBy(h => h.Name)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();

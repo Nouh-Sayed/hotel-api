@@ -24,5 +24,14 @@ namespace HotelApi.DTOs
 
         [Range(0, 20)]
         public int Children { get; set; }
+
+        [Range(0, 999999999)]
+        public decimal TotalPrice { get; set; }
+
+        [MaxLength(50)]
+        public string Status { get; set; } = "Pending";
+
+        [MaxLength(500)]
+        public string SpecialRequests { get; set; } = string.Empty;
     }
 }
